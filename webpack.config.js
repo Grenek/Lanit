@@ -5,9 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    ministry: './src/ministry.js',
-    checkbox: './src/checkbox.js',
-    map: './src/map.js'
+    ministry: './src/ministry/ministry.js',
+    checkbox: './src/checkbox/checkbox.js',
+    map: './src/map/map.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -60,19 +60,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/checkbox.html',
+      template: './src/checkbox/checkbox.html',
       filename: 'checkbox.html'
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/map.html',
+      template: './src/map/map.html',
       filename: 'map.html'
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/ministry.html',
+      template: './src/ministry/ministry.html',
       filename: 'ministry.html'
     })
   ]

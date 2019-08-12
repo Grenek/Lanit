@@ -1,4 +1,4 @@
-import "./scss/checkbox.scss";
+import "../checkbox/checkbox.scss";
 import jQuery from 'jquery';
 import popper from 'popper.js';
 import bootstrap from 'bootstrap';
