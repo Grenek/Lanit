@@ -1,0 +1,281 @@
+$theme-colors: (
+  "dark": #3b4256,
+  "light": #ffffff
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+@media (min-width: 0px) and (max-width: 992px) {
+
+  .navbar-dark .navbar-brand {
+    margin-left: 1%;
+    color: #dde1e6;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    justify-content: flex-start;
+  }
+
+  .navbar .media {
+    color: #3b4256;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 1%;
+    justify-content: flex-start;
+  }
+
+  #toggledDropdown {
+    margin-left: 1%;
+  }
+  #navbarSupportedContent {
+    margin-left: 1%;
+  }
+  #more {
+    display: none;
+  }
+  .navbar-toggler {
+    margin-right: 20px;
+  }
+
+  .under-header {
+    margin-left: 11%;
+    margin-right: 11%;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .navbar {
+    .navbar-dark, .navbar-brand {
+      margin-left: 11%;
+      color: #dde1e6;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      justify-content: flex-start;
+    }
+
+    .media {
+      color: #3b4256;
+      font-size: 20px;
+      font-family: "Open Sans", sans-serif;
+      margin-left: 11%;
+      line-height: 1.3;
+      justify-content: flex-start;
+    }
+  }
+
+  .navbar-toggler {
+    margin-right: 11%;
+  }
+
+  #navbarSupportedContent {
+    margin-left: 20px;
+  }
+
+  #more {
+    padding-right: 0px;
+  }
+
+  .under-header {
+    margin-left: 11%;
+    margin-right: 11%;
+    padding-bottom: 80px;
+  }
+}
+
+.navbar {
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #dde1e6;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar-collapse {
+  margin-right: 11%;
+}
+
+#nav1-items {
+  margin-right: 6px;
+}
+
+.brand-img {
+  margin-right: 12px;
+}
+
+#avatar {
+  margin-right: 8px;
+}
+
+// не показываем дефолтную стрелку dropdown
+.dropdown-toggle::after {
+  display: none;
+}
+
+#navbar-two {
+  margin-top: 56px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #3b4256;
+  max-height: 80px;
+}
+
+#breadcrumb {
+  margin-top: 64px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #848e99;
+  font-family: "Open Sans", sans-serif;
+}
+
+.breadcrumb {
+  padding: 0px;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 48px;
+  color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3{
+  letter-spacing: -0.6px;
+  font-size: 24px;
+  color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+}
+
+h4{
+  margin-bottom: 32px;
+  font-size: 24px;
+  color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+}
+
+h5 {
+  font-size: 18px;
+  color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+}
+
+#border {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#unordered-list {
+  list-style: none;
+  font-size: 16px;
+  color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 30px;
+  margin-bottom: 0px;
+}
+
+#unordered-list-item {
+  margin-bottom: 8px;
+}
+
+.col-lg-7 {
+  margin-right: 64px;
+  padding: 0px;
+}
+#unordered-list2 {
+  list-style: none;
+  font-size: 18px;
+  color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+#section2 {
+  margin-top: 80px;
+  margin-left: 11%;
+  padding-left: 0px;
+}
+
+#wiki-list {
+  margin-bottom: 32px;
+}
+
+footer {
+  background-color: #3b4256;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 80px;
+  .container {
+    margin-left: 11%;
+    margin-right: 11%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .btn {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f4f7fb;
+    border-radius: 4px;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .list-unstyled {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #848e99;
+    font-weight: 500;
+
+    li {
+      padding-top: 10px;
+    }
+  }
+
+  .very-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+    margin-left: 11%;
+    margin-right: 11%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    li {
+      padding-right: 16px;
+      font-size: 16px;
+      color: #dde1e6;
+      line-height: 1.5;
+    }
+  }
+}
+
+#footer-row1 {
+  padding-top: 80px;
+}
+
+#footer-row2 {
+  padding-top: 52px;
+}
+
+h6 {
+
+  margin-top: 24px;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 1.33;
+}
+
+#header-footer{
+  font-size: 20px;
+  line-height: 1.4;
+  color: #f4f7fb;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}

@@ -1,0 +1,19 @@
+$theme-colors: (
+  "primary": #0c49cd,
+);
+@import "~bootstrap/scss/bootstrap";
+
+.map {
+    margin: auto;
+}
+
+path {
+    fill: #f4f7fb;
+    stroke: #97a4b1;
+    transition: 0.3s;
+    &:hover {
+        fill:#fff;
+        cursor: pointer;
+    }
+
+}

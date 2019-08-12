@@ -1,0 +1,102 @@
+<html lang="ru">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="checkbox.css">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1>Элементы выбора</h1>
+				</div>
+				<div class="col d-flex align-items-end">
+					<li class="list-inline-item">Десктоп</li>
+					<li class="list-inline-item">Мобильная версия</li>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-12">
+					Элементы выбора используются при вводе данных пользователем. Чекбоксы и радиобаттоны используются
+					либо в строку либо в столбец, комбинированные сетки недопустимы. Для 2-5 пунктов лучше использовать
+					радобаттон, для 6-30 выпадающий список, для более 30 пунктов поле ввода с подсказкой.
+				</div>
+				<div class="col-xl-1">
+				</div>
+				<div class="col-xl-3 col-lg-6" id="elements">
+					<label class="container">Пункт
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="container">Наведение
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="container">Выбранный
+						<input type="checkbox" checked="checked" enabled>
+						<span class="checkmark"></span>
+					</label>
+					<label class="container disabled">Неактивный невыбранный
+						<input type="checkbox" disabled>
+						<span class="checkmark"></span>
+					</label>
+					<label class="container disabled">Неактивный выбранный
+						<input type="checkbox" checked="checked" disabled>
+						<span class="checkmark"></span>
+					</label>
+
+				</div>
+
+				<div class="col-xl-3 col-lg-6" id="elements">
+					<label class="container">Пункт
+						<input type="radio" name="radio">
+						<span class="radiomark"></span>
+					</label>
+					<label class="container">Наведение
+						<input type="radio" name="radio">
+						<span class="radiomark"></span>
+					</label>
+					<label class="container">Выбранный
+						<input type="radio" name="radio" checked="checked">
+						<span class="radiomark"></span>
+					</label>
+					<label class="container disabled">Неактивный невыбранный
+						<input type="radio" name="radio" disabled>
+						<span class="radiomark"></span>
+					</label>
+					<label class="container disabled">Неактивный выбранный
+						<input type="radio" name="radio" checked="checked" disabled>
+						<span class="radiomark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row" id="dropdown">
+				<div class="col-xl-6 offset-xl-6 col-lg-12">
+					<div class="dropdown">
+						<button onclick="myFunction()" class="dropbtn d-flex justify-content-between"
+							id="dropbtn">Выпадающий список <span class="arrow"></span>
+								 </button>
+						<div id="myDropdown" class="dropdown-content">
+							<a href="#">Пункт 1</a>
+							<a href="#">Пункт 2</a>
+							<a href="#">Пункт 3</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="checkbox.js"></script>
+</body>
+
+</html>
