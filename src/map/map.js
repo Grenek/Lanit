@@ -127,6 +127,11 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+document.getElementById("dropbtn2").addEventListener("click", myFunction2, false);
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+
 // filling dropdown content with values in regions
 function fillDropdownReg() {
     dropdown.innerHTML = "";
