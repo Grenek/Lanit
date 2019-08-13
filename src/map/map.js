@@ -58,7 +58,7 @@ let regions = [
     ["RU-ALT", "Алтайский край"],
     ["RU-DA", "Республика Дагестан"],
     ["RU-KB", "Кабардино-Балкарская республика"],
-    ["RU-KC", "Карачаевая-Черкесская республика"],
+    ["RU-KC", "Карачаево-Черкесская республика"],
     ["RU-KDA", "Краснодарский край"],
     ["RU-ROS", "Ростовская область"],
     ["RU-SAM", "Самарская область"],
@@ -98,8 +98,10 @@ let dropdown = document.getElementById("myDropdown");
 window.onload = function () {
     mouseFollow(regions);
     fillDropdownReg();
+    makeListHover(regions);
 }
 
+// shows description of region you are hovering now
 function mouseFollow(arr) {
     for (let i = 0; i < arr.length; i++) {
         let area = document.getElementById(arr[i][0]);
@@ -119,15 +121,60 @@ function mouseFollow(arr) {
     };
 }
 
+// showing dropdown items by clicking on button
 document.getElementById("dropbtn").addEventListener("click", myFunction, false);
-
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+// filling dropdown content with values in regions
 function fillDropdownReg() {
     dropdown.innerHTML = "";
     for (let i = 0; i < regions.length; i++) {
-      dropdown.insertAdjacentHTML('beforeend', `<a href="#">${regions[i][1]}<hr></a>`);
+        dropdown.insertAdjacentHTML('beforeend', `<a href="#" class="list">${regions[i][1]}</a>`);
     }
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+// shows region when hovers on item in dropdown list
+function makeListHover(arr) {
+    let list = document.querySelectorAll(".list");
+    list.forEach( function(item) {
+      item.onmouseover = function () {
+        for (let i = 0; i < arr.length; i++) {
+          if (this.innerHTML === arr[i][1]) {
+            let selected = document.getElementById(arr[i][0]);
+            description.classList.add('active');
+            description.innerHTML = this.innerHTML;
+            selected.style.fill="#ffffff"
+            let centerX = selected.getBoundingClientRect().left + selected.getBoundingClientRect().width / 2 - description.getBoundingClientRect().width / 2;
+            let centerY = selected.getBoundingClientRect().top - description.getBoundingClientRect().height - 10;
+            description.style.left = centerX + "px";
+            description.style.top = centerY + "px";
+          }
+        }
+      };
+      item.onmouseout = function() {
+        for (let i = 0; i < arr.length; i++) {
+          if (this.innerHTML === arr[i][1]) {
+            let selected = document.getElementById(arr[i][0]);
+            description.classList.remove('active');
+            selected.style.fill="#f4f7fb"
+          }
+      }
+    };
+    });
   }
