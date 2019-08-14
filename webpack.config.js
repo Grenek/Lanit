@@ -7,7 +7,8 @@ module.exports = {
   entry: {
     ministry: './src/ministry/ministry.js',
     checkbox: './src/checkbox/checkbox.js',
-    map: './src/map/map.js'
+    map: './src/map/map.js',
+    chart: './src/map/chart.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,7 +18,7 @@ module.exports = {
     rules: [
 
       {
-        test: /\.svg/,
+        test: /\.svg/, 
         use: {
           loader: 'svg-url-loader',
           options: {}
@@ -29,7 +30,11 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {},
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            },
           },
         ],
       },
@@ -40,6 +45,11 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       },
 
       {
@@ -58,22 +68,25 @@ module.exports = {
     ),
 
     new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/checkbox/checkbox.html',
-      filename: 'checkbox.html'
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/map/map.html',
-      filename: 'map.html'
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/ministry/ministry.html',
-      filename: 'ministry.html'
+      filename: '[]'
     })
+    // new HtmlWebpackPlugin({
+    //   inject: false,
+    //   hash: true,
+    //   template: './src/checkbox/checkbox.html',
+    //   filename: 'checkbox.html'
+    // }),
+    // new HtmlWebpackPlugin({
+    //   inject: false,
+    //   hash: true,
+    //   template: './src/map/map.html',
+    //   filename: 'map.html'
+    // }),
+    // new HtmlWebpackPlugin({
+    //   inject: false,
+    //   hash: true,
+    //   template: './src/ministry/ministry.html',
+    //   filename: 'ministry.html'
+    // })
   ]
 };

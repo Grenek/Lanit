@@ -93,7 +93,7 @@ h2 {
     .arrow {
       width: 24px;
       height: 24px;
-      background-image: url(../../img/hamburger.svg);
+      background-image: url(img/hamburger.svg);
     }
   
     button {
@@ -233,7 +233,7 @@ h2 {
     /* When the element is checked, modify background*/
     .container input:checked ~ .checkmark {
       border-color: #0a41b8;
-      background-image: url(../../img/on.png);
+      background-image: url(img/on.png);
       background-position: center;
     }
   
@@ -243,7 +243,7 @@ h2 {
     }
   
     .container input:checked:disabled ~ .checkmark {
-      background-image: url(../../img/onGrey.png);
+      background-image: url(img/onGrey.png);
       background-position: center;
     }
   

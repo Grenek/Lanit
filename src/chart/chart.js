@@ -1,0 +1,1 @@
+import "../map/chart.scss";

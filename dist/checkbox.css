@@ -7110,13 +7110,13 @@ section {
       background-color: #fff; }
   #elements .container input:checked ~ .checkmark, #elements .container input:checked ~ .radiomark {
     border-color: #0a41b8;
-    background-image: url(0dde797bb147ab577e9e614bac59d39c.png);
+    background-image: url(img/on.png);
     background-position: center; }
   #elements .container input:checked ~ .radiomark {
     background-image: none;
     background-color: #0a41b8; }
   #elements .container input:checked:disabled ~ .checkmark, #elements .container input:checked:disabled ~ .radiomark {
-    background-image: url(54d99f8577a2b24823c26c7d40ce17ec.png);
+    background-image: url(img/onGrey.png);
     background-position: center; }
   #elements .container input:checked:disabled ~ .radiomark {
     background-image: none; }
