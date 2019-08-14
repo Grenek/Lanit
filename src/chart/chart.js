@@ -1,1 +1,1 @@
-import "../map/chart.scss";
+import "../chart/chart.scss";
