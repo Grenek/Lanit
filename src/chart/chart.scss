@@ -1,1 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
+
+* {
+    background-color: #fff;
+}
+.container {
+    margin-top: 5%;
+    width: 90%;
+    height: 374px;
+}
