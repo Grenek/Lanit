@@ -91,12 +91,14 @@ let regions = [
     ["RU-STA", "Ставропольский край"],
     ["RU-TUL", "Тульская область"]
 ];
+let fedRegions = [["Central", "Центральный"], ["Northwestern", "Северо-Западный"], ["Southern-1", "Южный"], ["path5292", "Северо-Кавказский"], ["Volga", "Приволжский"], ["Urals", "Уральский"], ["Siberia", "Сибирский"], ["Far_Eastern", "Дальневосточный"]];
 let description = document.querySelector(".description");
 let dropdown = document.getElementById("myDropdown");
 
 // как только загрузилось окно 
 window.onload = function () {
     mouseFollow(regions);
+    mouseFollow(fedRegions);
     fillDropdownReg();
     makeListHover(regions);
 }
@@ -127,11 +129,6 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-document.getElementById("dropbtn2").addEventListener("click", myFunction2, false);
-function myFunction2() {
-    document.getElementById("myDropdown2").classList.toggle("show");
-}
-
 // filling dropdown content with values in regions
 function fillDropdownReg() {
     dropdown.innerHTML = "";
@@ -157,29 +154,29 @@ window.onclick = function (event) {
 // shows region when hovers on item in dropdown list
 function makeListHover(arr) {
     let list = document.querySelectorAll(".list");
-    list.forEach( function(item) {
-      item.onmouseover = function () {
-        for (let i = 0; i < arr.length; i++) {
-          if (this.innerHTML === arr[i][1]) {
-            let selected = document.getElementById(arr[i][0]);
-            description.classList.add('active');
-            description.innerHTML = this.innerHTML;
-            selected.style.fill="#ffffff"
-            let centerX = selected.getBoundingClientRect().left + selected.getBoundingClientRect().width / 2 - description.getBoundingClientRect().width / 2;
-            let centerY = selected.getBoundingClientRect().top - description.getBoundingClientRect().height - 10;
-            description.style.left = centerX + "px";
-            description.style.top = centerY + "px";
-          }
-        }
-      };
-      item.onmouseout = function() {
-        for (let i = 0; i < arr.length; i++) {
-          if (this.innerHTML === arr[i][1]) {
-            let selected = document.getElementById(arr[i][0]);
-            description.classList.remove('active');
-            selected.style.fill="#f4f7fb"
-          }
-      }
-    };
+    list.forEach(function (item) {
+        item.onmouseover = function () {
+            for (let i = 0; i < arr.length; i++) {
+                if (this.innerHTML === arr[i][1]) {
+                    let selected = document.getElementById(arr[i][0]);
+                    description.classList.add('active');
+                    description.innerHTML = this.innerHTML;
+                    selected.style.fill = "#ffffff"
+                    let centerX = selected.getBoundingClientRect().left + selected.getBoundingClientRect().width / 2 - description.getBoundingClientRect().width / 2;
+                    let centerY = selected.getBoundingClientRect().top - description.getBoundingClientRect().height - 10;
+                    description.style.left = centerX + "px";
+                    description.style.top = centerY + "px";
+                }
+            }
+        };
+        item.onmouseout = function () {
+            for (let i = 0; i < arr.length; i++) {
+                if (this.innerHTML === arr[i][1]) {
+                    let selected = document.getElementById(arr[i][0]);
+                    description.classList.remove('active');
+                    selected.style.fill = "#f4f7fb"
+                }
+            }
+        };
     });
-  }
+}
