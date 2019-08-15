@@ -17,7 +17,12 @@ let data = {
         borderColor: 'rgb(13, 73, 204)',
         lineTension: 0,
         data: dataForChart,
-        pointRadius: 6
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "#0d49cc",
+
+
     }],
 }
 
@@ -89,12 +94,14 @@ Chart.controllers.LineWithLine = Chart.controllers.line.extend({
       Chart.controllers.line.prototype.draw.call(this, ease);
 
       if (this.chart.tooltip._active && this.chart.tooltip._active.length) {
+          console.log(this.chart.data.datasets[0]) //todo начать показывать point при активном tooltip
          var activePoint = this.chart.tooltip._active[0],
              ctx = this.chart.ctx,
              x = activePoint.tooltipPosition().x,
              y = activePoint.tooltipPosition().y,
              topY = this.chart.scales['y-axis-0'].top,
              bottomY = this.chart.scales['y-axis-0'].bottom;
+             
 
          // draw line
          ctx.save();
