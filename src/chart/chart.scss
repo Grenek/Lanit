@@ -1,10 +1,75 @@
 @import "~bootstrap/scss/bootstrap";
 
-* {
+h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  color: #3b4256;
+  margin: 80px 0px 32px 0px;
+}
+
+#chart {
+  margin-top: 35px;
+  width: 90%;
+  height: 374px;
+  padding: 0px;
+}
+
+#columns {
+  padding: 0px;
+}
+
+.row {
+  margin: auto;
+}
+
+.col-4 {
+  height: 178px;
+  padding: 0px;
+  border: solid 1px #dde1e6;
+  background-color: #f4f7fb;
+  &:hover {
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+.chosen {
+    border-bottom: solid 4px #0d49cc;
     background-color: #fff;
 }
-.container {
-    margin-top: 5%;
-    width: 90%;
-    height: 374px;
+
+#header {
+  height: 48px;
+  margin: 32px 64px 0px 32px;
+  font-size: 16px;
+  color: #848e99;
+}
+
+.col-12 {
+  padding: 0px;
+}
+
+.col-9 {
+  padding: 0px;
+}
+
+.col-3 {
+  padding: 0px;
+}
+
+#result {
+  height: 56px;
+  font-size: 48px;
+  color: #3b4256;
+  margin: 17px 32px 0px 32px;
+  .col-9 {
+    height: 56px;
+  }
+  .col-3 {
+    height: 56px;
+  }
+  a {
+    font-size: 18px;
+  }
 }
