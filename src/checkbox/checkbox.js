@@ -6,7 +6,7 @@ import bootstrap from 'bootstrap';
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
-document.getElementById ("dropbtn").addEventListener ("click", myFunction, false);
+document.getElementById("dropbtn").addEventListener("click", myFunction, false);
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");

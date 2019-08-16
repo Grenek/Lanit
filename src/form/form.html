@@ -1,0 +1,55 @@
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="container main">
+        <div class="row dropdown-row">
+            <div class="col-12 dropdown-col">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn d-flex justify-content-between align-items-center">
+                        <span class="text">Замечания и предложения по набору данных</span>
+                        <span class="arrow"></span>
+                    </button>
+                    <div class="dropdown-content show">
+                        <div class="row">
+                            <div class="col-6 theme-col">
+                                <input type="text" class="theme-input" placeholder="Тема">
+                            </div>
+                            <div class="col-6 name-col">
+                                <input type="text" class="name-input" placeholder="Имя">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 phone-col">
+                                <input type="text" class="phone-input" placeholder="Телефон">
+                            </div>
+                            <div class="col-6 mail-col">
+                                <input type="text" class="mail-input" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 body-col">
+                                <input type="text" class="body-input">
+                            </div>
+                        </div>
+                        <div class="row justify-content-end align-content-center">
+                            <div class="rules-checkbox">
+                                <label class="rules-container">Я согласен с правилами обращений граждан
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button>Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>

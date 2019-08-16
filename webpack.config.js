@@ -8,7 +8,8 @@ module.exports = {
     ministry: './src/ministry/ministry.js',
     checkbox: './src/checkbox/checkbox.js',
     map: './src/map/map.js',
-    chart: './src/chart/chart.js'
+    chart: './src/chart/chart.js',
+    form: './src/form/form.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -90,6 +91,12 @@ module.exports = {
       hash: true,
       template: './src/chart/chart.html',
       filename: 'chart.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/form/form.html',
+      filename: 'form.html'
     })
   ]
 };
