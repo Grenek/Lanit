@@ -7097,15 +7097,40 @@ input {
   font-size: 16px;
   color: #3b4256; }
 
+.validated {
+  border: solid 1px #71bc90 !important; }
+
 input:hover {
   border: solid 1px #b3bbc3; }
 
 input:focus {
-  border: solid 1px #62b0ff; }
+  border: solid 1px #62b0ff;
+  padding-top: 24px; }
+
+input:focus ~ div {
+  display: block;
+  line-height: 1.43;
+  color: #848e99;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 48px; }
+
+input::-webkit-input-placeholder {
+  color: #3b4256; }
 
 input:focus::-webkit-input-placeholder {
+  opacity: 0; }
+
+.placeholder {
+  display: none;
+  line-height: 1.43;
   color: #848e99;
-  margin-bottom: 34px; }
+  font-size: 16px;
+  position: relative;
+  color: #3b4256;
+  top: 0px;
+  left: 24px; }
 
 .col-6 {
   padding-left: 32px;

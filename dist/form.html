@@ -15,28 +15,32 @@
                         <span class="text">Замечания и предложения по набору данных</span>
                         <span class="arrow"></span>
                     </button>
-                    <form>
+                    <form name="suggestion">
                         <div class="dropdown-content show">
                             <div class="row">
                                 <div class="col-6 theme-col">
-                                    <input required type="text" class="theme-input" placeholder="Тема">
-                                    <div class = "theme-div">Тема</div>
+                                    <input required type="text" name="theme" class="theme-input" placeholder="Тема">
+                                    <div class = "placeholder">Тема</div>
                                 </div>
                                 <div class="col-6 name-col">
-                                    <input required type="text" class="name-input" placeholder="Имя">
+                                    <input required type="text" name="name" class="name-input" pattern="^[А-Яа-яЁё\s]+$" placeholder="Имя">
+                                    <div class = "placeholder">Имя</div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6 phone-col">
-                                    <input required type="text" class="phone-input" placeholder="Телефон">
+                                    <input required type="text" name="phone" class="phone-input" placeholder="Телефон">
+                                    <div class = "placeholder">Телефон</div>
                                 </div>
                                 <div class="col-6 mail-col">
-                                    <input required type="text" class="mail-input" placeholder="E-mail">
+                                    <input required type="text" name="mail" class="mail-input" pattern="^([a-z0-9_А-я\.-]+)@([a-z0-9_А-я\.-]+)\.([a-zА-я\.]{2,6})$" placeholder="E-mail">
+                                    <div class = "placeholder">E-mail</div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 body-col">
-                                    <input required type="text" class="body-input">
+                                    <input required type="text" name="text" class="body-input" pattern="^[А-Яа-яЁё\s]+$" placeholder="Текст">
+                                    <div class = "placeholder">Текст</div>
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-end align-content-center rules-row">
@@ -46,7 +50,7 @@
                                         <input class="checkbox-input" type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <button disabled type="submit" class="send-button">Отправить</button>
+                                    <button type="submit" class="send-button">Отправить</button>
                                 </div>
                             </div>
                         </div>
