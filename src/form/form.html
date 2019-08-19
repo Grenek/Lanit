@@ -15,38 +15,42 @@
                         <span class="text">Замечания и предложения по набору данных</span>
                         <span class="arrow"></span>
                     </button>
-                    <div class="dropdown-content show">
-                        <div class="row">
-                            <div class="col-6 theme-col">
-                                <input type="text" class="theme-input" placeholder="Тема">
+                    <form>
+                        <div class="dropdown-content show">
+                            <div class="row">
+                                <div class="col-6 theme-col">
+                                    <input required type="text" class="theme-input" placeholder="Тема">
+                                    <!-- <div class = "placeholder">Тема</div> -->
+                                </div>
+                                <div class="col-6 name-col">
+                                    <input required type="text" class="name-input" placeholder="Имя">
+                                </div>
                             </div>
-                            <div class="col-6 name-col">
-                                <input type="text" class="name-input" placeholder="Имя">
+                            <div class="row">
+                                <div class="col-6 phone-col">
+                                    <input required type="text" class="phone-input" placeholder="Телефон">
+                                </div>
+                                <div class="col-6 mail-col">
+                                    <input required type="text" class="mail-input" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 body-col">
+                                    <input required type="text" class="body-input">
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-end align-content-center rules-row">
+                                <div class=" d-flex align-content-center rules-checkbox">
+                                    <label class=" d-flex align-content-center rules-container">Я согласен с <a
+                                            href="#">правилами</a> обращений граждан
+                                        <input class="checkbox-input" type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <button disabled type="submit" class="send-button">Отправить</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-6 phone-col">
-                                <input type="text" class="phone-input" placeholder="Телефон">
-                            </div>
-                            <div class="col-6 mail-col">
-                                <input type="text" class="mail-input" placeholder="E-mail">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 body-col">
-                                <input type="text" class="body-input">
-                            </div>
-                        </div>
-                        <div class="row justify-content-end align-content-center">
-                            <div class="rules-checkbox">
-                                <label class="rules-container">Я согласен с правилами обращений граждан
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <button>Отправить</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

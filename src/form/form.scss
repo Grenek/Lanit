@@ -5,7 +5,7 @@ body {
 }
 
 .row {
-    margin: 0px;
+  margin: 0px;
 }
 
 .main {
@@ -65,134 +65,187 @@ body {
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 10px 0px;
-    margin: 0px 12px;
-    height: 40px;
-    font-size: 14px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #dde1e6;
-  }
+  color: black;
+  padding: 10px 0px;
+  margin: 0px 12px;
+  height: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #dde1e6;
+}
 
 .show {
   display: block;
 }
 
 input {
-    background-color: #f4f7fb;
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding: 0px;
-    padding-left: 16px;
-    font-size: 16px;
-    color: #3b4256;
+  border-radius: 4px;
+  background-color: #f4f7fb;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0px;
+  padding-left: 16px;
+  font-size: 16px;
+  color: #3b4256;
+}
+
+input:hover {
+  border: solid 1px #b3bbc3;
+}
+
+input:focus {
+  border: solid 1px #62b0ff;
+
+}
+
+.placeholder {
+  display: none;
+  line-height: 1.43;
+  color: $darkGray;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 16px;
 }
 
 .col-6 {
-    padding-left: 32px;
-    padding-right: 0px;
-    margin-bottom: 32px;
-    height: 64px;
+  padding-left: 32px;
+  padding-right: 0px;
+  margin-bottom: 32px;
+  height: 64px;
 }
 
 .name-col {
-    padding-right: 32px;
+  padding-right: 32px;
 }
 
 .mail-col {
-    padding-right: 32px;
+  padding-right: 32px;
 }
 
 .body-col {
-    padding: 0px 32px;
-    margin-bottom: 24px;
-    height: 136px;
+  padding: 0px 32px;
+  margin-bottom: 24px;
+  height: 136px;
 }
 
 .checkbox {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* Customize the label (the container) */
 .rules-container {
-    display: inline-block;
-    position: relative;
-    padding-left: 40px;
-    cursor: pointer;
+  margin: 0px;
+  display: inline-block;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #3b4256;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  a {
+    height: 24px;
+    padding: 0px;
+    margin: 0px 4px 0px 4px;
     font-size: 16px;
     color: #3b4256;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    border-bottom: 1px solid #0c49cd;
   }
-  
-  /* Hide the browser's default checkbox */
-  .rules-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 24px;
-    width: 24px;
-    border-radius: 4px;
-    border: solid 1px #dde1e6;
-    background-color: #f4f7fb;
-  }
-  
-  .rules-container:hover {
-    input ~ .checkmark {
-      border-color: #0a41b8;
-      background-color: #fff;
-    }
-  }
+}
 
-  .rules-container input:checked ~ .checkmark {
+/* Hide the browser's default checkbox */
+.rules-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 12;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  border: solid 1px #dde1e6;
+  background-color: #f4f7fb;
+}
+
+.rules-container:hover {
+  input ~ .checkmark {
     border-color: #0a41b8;
-    background-image: url(img/on.png);
-    background-position: center;
+    background-color: #fff;
   }
-  
-  /* When the checkbox is checked, add a blue background */
-  .rules-container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .rules-container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .rules-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+}
 
-  .rules-checkbox {
-      padding-right: 32px;
-  }
+.rules-container input:checked ~ .checkmark {
+  border-color: #0a41b8;
+  background-image: url(img/on.png);
+  background-position: center;
+}
+
+/* When the checkbox is checked, add a blue background */
+.rules-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.rules-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.rules-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.rules-checkbox {
+  padding-right: 32px;
+}
+
+.send-button {
+  height: 48px;
+  width: 112px;
+  margin-left: 32px;
+  background-color: #0c49cd;
+  border: none;
+  color: #f4f7fb;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0px;
+}
+
+.send-button:disabled,
+.send-button[disabled] {
+  background-color: #dde1e6;
+  color: #848e99;
+}
+
+.rules-row {
+  margin-bottom: 32px;
+}

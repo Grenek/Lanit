@@ -7087,6 +7087,7 @@ body {
   display: block; }
 
 input {
+  border-radius: 4px;
   background-color: #f4f7fb;
   width: 100%;
   height: 100%;
@@ -7095,6 +7096,16 @@ input {
   padding-left: 16px;
   font-size: 16px;
   color: #3b4256; }
+
+input:hover {
+  border: solid 1px #b3bbc3; }
+
+input:focus {
+  border: solid 1px #62b0ff; }
+
+input:focus::-webkit-input-placeholder {
+  color: #848e99;
+  margin-bottom: 34px; }
 
 .col-6 {
   padding-left: 32px;
@@ -7118,9 +7129,11 @@ input {
 
 /* Customize the label (the container) */
 .rules-container {
+  margin: 0px;
   display: inline-block;
   position: relative;
   padding-left: 40px;
+  padding-top: 12px;
   cursor: pointer;
   font-size: 16px;
   color: #3b4256;
@@ -7128,6 +7141,13 @@ input {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  .rules-container a {
+    height: 24px;
+    padding: 0px;
+    margin: 0px 4px 0px 4px;
+    font-size: 16px;
+    color: #3b4256;
+    border-bottom: 1px solid #0c49cd; }
 
 /* Hide the browser's default checkbox */
 .rules-container input {
@@ -7140,7 +7160,7 @@ input {
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 12;
   left: 0;
   height: 24px;
   width: 24px;
@@ -7159,7 +7179,7 @@ input {
 
 /* When the checkbox is checked, add a blue background */
 .rules-container input:checked ~ .checkmark {
-  background-color: #2196F3; }
+  background-color: #2196f3; }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -7185,3 +7205,23 @@ input {
 
 .rules-checkbox {
   padding-right: 32px; }
+
+.send-button {
+  height: 48px;
+  width: 112px;
+  margin-left: 32px;
+  background-color: #0c49cd;
+  border: none;
+  color: #f4f7fb;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0px; }
+
+.send-button:disabled,
+.send-button[disabled] {
+  background-color: #dde1e6;
+  color: #848e99; }
+
+.rules-row {
+  margin-bottom: 32px; }
